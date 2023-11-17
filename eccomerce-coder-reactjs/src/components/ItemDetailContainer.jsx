@@ -14,7 +14,7 @@ export const ItemDetailContainer = () => {
         const mypromise = new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(productos);
-            }, 2000);
+            }, 250);
         });
 
         mypromise.then((response) => {

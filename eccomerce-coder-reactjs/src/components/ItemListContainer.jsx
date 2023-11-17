@@ -14,7 +14,7 @@ export const ItemListContainer = (props) => {
         const mypromise = new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(productos)
-            }, 2000)
+            }, 250)
         });
 
         mypromise.then((response) => {

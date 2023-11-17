@@ -23,4 +23,20 @@ export const productos = [
         category: "citizen",
         pictureUrl: "https://joyeriaelcorreo.com.ar/wp-content/uploads/2023/01/nh836314h.jpg",
     },
+    { 
+        id: 4, 
+        title: "Movado - bold", 
+        description: "3600296", 
+        price: 150000, 
+        category: "movado",
+        pictureUrl: "https://joyeriaelcorreo.com.ar/wp-content/uploads/2023/01/3600296_frontal.jpg",
+    },
+    { 
+        id: 5, 
+        title: "Victorinox - AIRBoss Limited Edition", 
+        description: "241760", 
+        price: 150000, 
+        category: "victorinox",
+        pictureUrl: "https://joyeriaelcorreo.com.ar/wp-content/uploads/2023/01/241760.jpg",
+    },
 ];
