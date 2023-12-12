@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState, useContext } from "react";
 import Container from 'react-bootstrap/Container';
-import { getFirestore, getDoc, doc } from "firebase/firestore";
+import { getFirestore, getDoc, doc, collection, getDocs } from "firebase/firestore";
 
 import { productos } from '../data/products';
 import { ItemList } from "./ItemList";
@@ -15,10 +15,15 @@ export const ItemListContainer = (props) => {
         useEffect(() => {
         const db = getFirestore();
 
-        const refDoc = doc(db, "Items-Relojes", "LmSqRZCnmgPu7G4AJDtd");
+        const refCollection = collection(db, "Items-Relojes");
 
-        getDoc(refDoc).then((snapshot) => {
-            console.log({ id: snapshot.id, ...snapshot.data() });
+        getDocs(refCollection).then((snapshot) => {
+            if (snapshot.size === 0) console.log("no results");
+            else
+                console.log(snapshot.docs.map((doc) => {
+                    return { id: doc.id, ...doc.data() };
+            })
+        );
         });
         }, []);
 
