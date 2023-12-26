@@ -19,6 +19,8 @@ export const Cart = () => {
     
     const navigate = useNavigate();
 
+    const total = items.reduce((acumulador, valorActual) => acumulador + valorActual.quantity * valorActual.price, 0);
+
     const handleChange = (event) => {
         setBuyer(buyer => {
             return {
@@ -65,6 +67,7 @@ export const Cart = () => {
         <th>Reloj</th>
         <th>Modelo</th>
         <th></th>
+        <th>Cantidad</th>
         <th>Precio</th>
         <th>Eliminar</th>
         </tr>
@@ -75,27 +78,33 @@ export const Cart = () => {
             <td>{item.title}</td>
             <td>{item.description}</td>
             <td><img src={item.pictureUrl} width={150} /></td>
+            <td>{item.quantity}</td>
             <td>{item.price}</td>
             
             <td onClick={() => onRemove(item.id)}>X</td>
             </tr>
         ))}
     </tbody>
+    <tfoot>
+        <tr>
+            <td>Total a pagar: ${total}</td>
+        </tr>
+    </tfoot>
     </Table>
         <button onClick={clear}>Vaciar Carrito</button>
         <hr />
         <Form>
     <Form.Group className="mb-3">
         <Form.Label>Email</Form.Label>
-        <Form.Control type="email" value={buyer.email} onChange={handleChange} name="email" />
+        <Form.Control type="email" value={buyer.email} onChange={handleChange} name="email" required/>
     </Form.Group>
     <Form.Group className="mb-3">
         <Form.Label>Nombre</Form.Label>
-        <Form.Control type="text" value={buyer.name} onChange={handleChange} name="name"/>
+        <Form.Control type="text" value={buyer.name} onChange={handleChange} name="name" required/>
     </Form.Group>
     <Form.Group className="mb-3">
         <Form.Label>Numero</Form.Label>
-        <Form.Control type="text" value={buyer.phone} onChange={handleChange} name="phone"/>
+        <Form.Control type="text" value={buyer.phone} onChange={handleChange} name="phone" required/>
     </Form.Group>
     <Button variant="primary" onClick={sendOrder}>
         Enviar
