@@ -7,8 +7,8 @@ import { productos } from "../data/products";
 export const ItemDetail = ({item}) => {
     const { onAdd } = useContext(CartContext);
 
-    const add = () => {
-        onAdd(item);
+    const add = (quantity) => {
+        onAdd(item, quantity);
 
         Toastify({
 
@@ -27,7 +27,8 @@ export const ItemDetail = ({item}) => {
         <>
             <h1>{item.title}</h1>
             <img src={item.pictureUrl} width={300} />
-            <ItemCounter onAdd={add} />
+            <h2 style={{fontSize: 24, margin: "10px 0 0 30px"}}>Cantidad disponible: {item.stock}</h2>
+            <ItemCounter onAdd={add} stock={item.stock} initial={1} />
         </>
     );
 };

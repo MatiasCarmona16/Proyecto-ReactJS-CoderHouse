@@ -5,6 +5,7 @@ export const productos = [
         description: "NH835059A", 
         price: 60000, 
         category: "citizen",
+        stock: 4,
         pictureUrl: "https://joyeriaelcorreo.com.ar/wp-content/uploads/2023/01/nh835059a.jpg",
     },
     { 
@@ -13,6 +14,7 @@ export const productos = [
         description: "BM736082L", 
         price: 65000, 
         category: "citizen",
+        stock: 7,
         pictureUrl: "https://joyeriaelcorreo.com.ar/wp-content/uploads/2023/01/bm736082l.jpg",
     },
     { 
@@ -21,6 +23,7 @@ export const productos = [
         description: "NH836314H", 
         price: 60000, 
         category: "citizen",
+        stock: 10,
         pictureUrl: "https://joyeriaelcorreo.com.ar/wp-content/uploads/2023/01/nh836314h.jpg",
     },
     { 
@@ -29,6 +32,7 @@ export const productos = [
         description: "3600296", 
         price: 100000, 
         category: "movado",
+        stock: 2,
         pictureUrl: "https://joyeriaelcorreo.com.ar/wp-content/uploads/2023/01/3600296_frontal.jpg",
     },
     { 
@@ -37,6 +41,7 @@ export const productos = [
         description: "241760", 
         price: 90000, 
         category: "victorinox",
+        stock: 6,
         pictureUrl: "https://joyeriaelcorreo.com.ar/wp-content/uploads/2023/01/241760.jpg",
     },
     { 
@@ -45,6 +50,7 @@ export const productos = [
         description: "360084", 
         price: 95000, 
         category: "movado",
+        stock: 3,
         pictureUrl: "https://joyeriaelcorreo.com.ar/wp-content/uploads/2023/01/3600084_frontal.jpg",
     },
     { 
@@ -53,6 +59,7 @@ export const productos = [
         description: "3600561", 
         price: 87000, 
         category: "movado",
+        stock: 15,
         pictureUrl: "https://joyeriaelcorreo.com.ar/wp-content/uploads/2023/01/3600561_frontal-300x502.jpg",
     },
     { 
@@ -61,6 +68,7 @@ export const productos = [
         description: "241877", 
         price: 85000, 
         category: "victorinox",
+        stock: 12,
         pictureUrl: "https://joyeriaelcorreo.com.ar/wp-content/uploads/2023/01/241817-500x863.jpg",
     },
     { 
@@ -69,6 +77,7 @@ export const productos = [
         description: "241842", 
         price: 90000, 
         category: "victorinox",
+        stock: 7,
         pictureUrl: "https://joyeriaelcorreo.com.ar/wp-content/uploads/2023/01/241742-500x750.jpg",
     },
 ];
